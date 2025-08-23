@@ -14,7 +14,7 @@ export function HeroSection() {
         loading="lazy"
         width={1000}
         height={1000}
-        className="absolute top-20 z-3 max-w-full h-auto w-fit"
+        className="absolute top-20 z-3 max-w-full h-auto w-fit "
     />
      <Image 
         src="/images/back2.png"
@@ -26,13 +26,13 @@ export function HeroSection() {
      <div className="absolute bottom-0 z-10 text-center px-100 justify-between w-full flex space-x-4">
         <Button
           size="lg"
-          className="relative bottom-20 bg-cover bg-center bg-no-repeat rounded-full"
+          className="relative bottom-20 bg-cover bg-center bg-no-repeat rounded-full hover:text-amber-600 transition-colors hover-grow"
            style={{backgroundImage: "url('/images/PINKSALE.png')", backgroundSize: 'cover'}}    
           onClick={() => window.location.href = 'https://pancakeswap.finance/swap'}
           ></Button>
         <Button
           size={"lg"}
-          className="relative bottom-20 bg-cover bg-center bg-no-repeat rounded-full" 
+          className="relative bottom-20 bg-cover bg-center bg-no-repeat rounded-full hover:text-amber-600 transition-colors hover-grow" 
           style={{backgroundImage: "url('/images/WHITEPAPER.png')", backgroundSize: 'cover'}}          
           onClick={() => window.location.href = 'https://pancakeswap.finance/swap'}
         ></Button>
@@ -44,28 +44,28 @@ export function HeroSection() {
           alt="Scroll Down"
           width={50}
           height={50}
-          className="w-30 h-30"
+          className="w-30 h-30 hover:text-amber-600 transition-colors hover-grow"
         />
         <Image 
           src="/images/button_2.png"
           alt="Scroll Down"
           width={50}
           height={50}
-          className="w-30 h-30"
+          className="w-30 h-30 hover:text-amber-600 transition-colors hover-grow"
         />
         <Image 
           src="/images/button_3.png"
           alt="Scroll Down"
           width={50}
           height={50}
-          className="w-30 h-30"
+          className="w-30 h-30 hover:text-amber-600 transition-colors hover-grow"
         />
         <Image 
           src="/images/button_4.png"
           alt="Scroll Down"
           width={50}
           height={50}
-          className="w-30 h-30"
+          className="w-30 h-30 hover:text-amber-600 transition-colors hover-grow"
         />
     </div>
 
