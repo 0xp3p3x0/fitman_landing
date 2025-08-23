@@ -37,13 +37,27 @@ export function TokenomicsSection() {
       />
       <div className="absolute bottom-5 right-0 z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
 
-        <div className="pl-50 grid grid-cols-1 items-center">
+        <div className="items-center justify-center">
+          <Card className="bg-yellow-400 bg-opacity-80 shadow-lg rounded-4xl w-fit border-yellow-500 border-12 mx-auto mb-10">
+            <CardContent>
+              <div className="w-full px-8">
+                <p className="space-y-2 font-['Gagalin-Regular'] text-6xl items-center text-center">
+                  <span className="text-white">Contract Address</span>
+                </p>
+                <p className="space-y-2 font-['Gagalin-Regular'] text-4xl items-center text-center">
+                  <span style={{ fontWeight: '1000' }}>
+                    0x1234567890abcdef1234567890abcdef1234567890
+                  </span>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
           <Card className="bg-yellow-400 bg-opacity-80 shadow-lg">
 
             <CardContent>
-              <div className="w-full">
+              <div className="w-full px-8">
 
-                <ul className="list-inside space-y-2 font-['Gagalin-Regular'] text-3xl" style={{ listStyleType: 'circle' }}>
+                <ul className="space-y-2 font-['Gagalin-Regular'] text-4xl list-disc">
                   <li><span style={{ fontWeight: '1000' }}>Fairlaunch (Pinksale): 70%</span> </li>
                   <li><span className="font-bold ">Marketing: 8%(vested) </span></li>
                   <li><span className="font-bold ">Community Rewards: 2% (airdrops, contests, raids)</span></li>
@@ -56,6 +70,14 @@ export function TokenomicsSection() {
           </Card>
         </div>
       </div>
+      <Image
+        src={"/images/about-bottom.png"}
+        alt="About Image"
+        loading="lazy"
+        width={800}
+        height={800}
+        className="absolute bottom-0 left-0 z-0 max-w-full h-auto w-fit"
+      />
       <div className="absolute bottom-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
     </section>
   )
