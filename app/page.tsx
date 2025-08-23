@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/hero-section"
-import { Navbar } from "@/components/navbar"
 import { UtilitiesSection } from "@/components/utilities-section"
 import { TokenomicsSection } from "@/components/tokenomics-section"
 import { RoadmapSection } from "@/components/roadmap-section"
