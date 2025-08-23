@@ -6,6 +6,7 @@ import { RoadmapSection } from "@/components/roadmap-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 import { AboutSection } from "@/components/about-section"
+import { UtilitiesSection2 } from "@/components/utilities-section2"
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <RoadmapSection />
-      <UtilitiesSection />
-      <TokenomicsSection />
 
+      <TokenomicsSection />
+      <UtilitiesSection />
+      <UtilitiesSection2 />
       <CTASection />
       <Footer />
     </main>
