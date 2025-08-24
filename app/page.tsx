@@ -9,7 +9,7 @@ import { UtilitiesSection2 } from "@/components/utilities-section2"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="">
       <HeroSection />
       <AboutSection />
       <RoadmapSection />

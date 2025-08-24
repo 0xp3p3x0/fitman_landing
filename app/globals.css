@@ -115,6 +115,15 @@
     transform: translateY(-10px);
   }
 }
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
 @keyframes belly-shake {
   0%,
@@ -162,12 +171,16 @@
 }
 
 .animate-wiggle {
-  animation: wiggle 2s ease-in-out infinite;
+  animation: bounce 5s ease-in-out infinite;
 }
 
 .animate-bounce-slow {
   animation: bounce-slow 3s ease-in-out infinite;
 }
+.animate-bounce{
+  animation: bounce 2s ease-in-out infinite;
+}
+
 
 .animate-belly-shake {
   animation: belly-shake 2s ease-in-out infinite;
@@ -203,4 +216,13 @@
   src: url('../public/fonts/Gagalin\ Regular.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
+}
+.text-with-stroke {
+  font-size: 2rem;
+  color:black; /* Text color */
+  text-shadow:
+    1px 1px 0 #6b6102,   /* Horizontal shadow */
+    -1px -1px 0 #ffffff, /* Top-left shadow */
+    1px -1px 0 #ffffff,  /* Top-right shadow */
+    -1px 1px 0 #ffffff;  /* Bottom-left shadow */
 }
