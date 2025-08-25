@@ -5,7 +5,7 @@ import RoadmapSections from "./ui/roadmap-sections";
 export function RoadmapSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat pt-60"
+      className="relative flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat pt-60"
       style={{ backgroundImage: "url('/images/back.png')", backgroundSize: "cover" }}
     >
       <div className="absolute top-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
