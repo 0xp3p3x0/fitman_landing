@@ -86,22 +86,17 @@ export function Footer() {
             <ul className="space-y-2 text-2xl">
               <li>
                 <a href="#" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
-                  🐦 <span>Twitter</span>
+                  <span>Twitter</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
-                  📱 <span>Telegram</span>
+                  <span>Telegram</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
-                  💬 <span>Discord</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
-                  📱 <span>Reddit</span>
+                  <span>Youtube</span>
                 </a>
               </li>
             </ul>
@@ -112,13 +107,6 @@ export function Footer() {
 
         
       </div>
-      <Image
-          src="/images/graphics/1.png"
-          alt="FATMAN Footer Image"
-          width={100}
-          height={100}
-          className="absoulte w-full h-auto"
-        />
     </footer>
   )
 }

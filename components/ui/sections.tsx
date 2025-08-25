@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from 'react';
 
@@ -6,39 +6,45 @@ interface SectionsProps {
     text: string;
     imageSrc: string;
     imageAlt: string;
-    imageBanner: string;
+    title: string;
+    className?: string; // Added to allow additional custom styles
 }
 
-const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, imageBanner }) => {
+const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title }) => {
     return (
         <div
-            className="relative w-full min-h bg-cover bg-center bg-no-repeat m-20"
+            className={`relative w-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] border-8 border-black rounded-lg`} // Added responsive height
+            style={{
+                backgroundImage: "linear-gradient(to right, #FFDA58, #FE944D)", // Gradient with hex colors
+            }}
         >
-
-            {/* Text over Image */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center z-10">
-                <p className=" font-bold text-left font-['Gagalin-Regular'] text-3xl p-10 m-8">
-                    {text}
-                </p>
+            {/* Overlay Text */}
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center z-10 p-6 sm:p-8 md:p-10 text-center">
+                <div className="font-['Gagalin-Regular']">
+                    <h2 className="text-white font-bold text-4xl sm:text-5xl mb-4">
+                        {title.split("\n").map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}
+                    </h2>
+                    <p className="font-semibold text-lg sm:text-2xl">
+                        {text.split("\n").map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}
+                    </p>
+                </div>
             </div>
-            {/* Banner Image */}
-            <img 
-                src={imageBanner}
-                alt="Decorative Banner"
-                className="absolute top-5 left-0 w-full h-32 object-cover z-0"
-            />
 
+            {/* Decorative Image */}
             <img
-                src="/images/graphics/10.png"
-                alt="Decorative Shape"
-                className="w-full h-full object-cover z-0"
-            />
-
-            {/* Another Image (Positioned at Bottom-Right) */}
-            <img
-                src={imageSrc}
+                src={imageSrc}  // Dynamically set image source
                 alt={imageAlt}
-                className="absolute -bottom-10 -right-20 w-auto h-auto object-cover z-5"
+                className="absolute -bottom-0 -right-4 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 object-contain z-5" // Ensure it’s contained and doesn’t overlap
             />
         </div>
     );

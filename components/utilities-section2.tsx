@@ -18,7 +18,7 @@ buybacks, buybacks burn supply,
 supply reduction drives value."
           imageSrc="/images/graphics/11.png"
           imageAlt="About Bottom Image"
-          imageBanner="/images/back3.png"
+          title="FATBURN"
         />
         <Sections
           text="Official FATMAN merchandise store!
@@ -27,7 +27,7 @@ supporting our chunky ecosystem.
 Fashion meets function!"
           imageSrc="/images/graphics/12.png"
           imageAlt="About Bottom Image"
-          imageBanner="/images/back3.png"
+          title="FATMERCH"
         />
         <Sections
           text="Play-to-earn games in the FATMAN
@@ -36,7 +36,7 @@ Gotham, and earn $FAT rewards.
 Gaming has never been this chunky!"
           imageSrc="/images/graphics/13.png"
           imageAlt="About Bottom Image"
-          imageBanner="/images/back3.png"
+          title="FATVERSE GAMES"
         />
         <Sections
           text="Official FATMAN merchandise store!
@@ -45,7 +45,7 @@ supporting our chunky ecosystem.
 Fashion meets function!"
           imageSrc="/images/graphics/14.png"
           imageAlt="About Bottom Image"
-          imageBanner="/images/back3.png"
+          title="FAT NFTS"
         />
       </div>
     </section>
