@@ -13,7 +13,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <RoadmapSection />
-
       <TokenomicsSection />
       <UtilitiesSection />
       <UtilitiesSection2 />
