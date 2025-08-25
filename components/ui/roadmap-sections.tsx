@@ -41,12 +41,10 @@ const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title, cl
             {/* Decorative Image */}
             <div className="absolute top-0 left-0 right-0 bottom-0">
                 {/* Image inside the div to cover */}
-                <Image
+                <img
                     src={imageSrc}  // Dynamically set image source
                     alt={imageAlt}
-                    width={256} // Adjust width as needed
-                    height={256} // Adjust height as needed
-                    className={`absolute ${className} sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 z-5`}  // Optional: Apply rounded corners to the image
+                    className={`absolute ${className} w-18 h-18 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-36 lg:h-36 z-5`}  // Optional: Apply rounded corners to the image
                 />
             </div>
         </div>
