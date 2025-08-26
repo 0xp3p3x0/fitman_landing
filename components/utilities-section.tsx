@@ -62,7 +62,7 @@ export function UtilitiesSection() {
           src="/images/utility_title.png"
           alt="Utilities Section"
           loading="lazy"
-          className="mx-auto w-72 md:w-96"
+          className="mx-auto w-1/3 md:w-96"
           />
         </div>
       <div className=" w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 px-20">

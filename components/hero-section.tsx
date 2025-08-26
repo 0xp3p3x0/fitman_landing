@@ -66,6 +66,7 @@ export function HeroSection() {
         <img
           src="/images/button_4.png"
           alt="Scroll Down"
+
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:text-amber-600 transition-colors hover-grow"
         />
       </div>
