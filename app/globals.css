@@ -170,6 +170,21 @@
   }
 }
 
+@keyframes moveRight {
+   0% {
+    transform: translateX(-100%); /* Start off-screen from the left */
+  }
+  50% {
+    transform: translateX(0); /* Move to the center */
+  }
+  100% {
+    transform: translateX(100vw); /* End off-screen to the right */
+  }
+}
+.move-right {
+  animation: moveRight 7s ease-in-out infinite; /* Apply the animation */
+}
+
 .animate-wiggle {
   animation: bounce 5s ease-in-out infinite;
 }

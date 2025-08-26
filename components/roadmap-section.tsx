@@ -76,12 +76,10 @@ export function RoadmapSection() {
       </div>
 
       {/* Footer Image */}
-      <Image
-        src="/images/roadmap.gif"
+      <img
+        src="/images/fatman_mortor.png"
         alt="Hero Image"
-        width={100}
-        height={1000}
-        className="absolute bottom-0 max-w-full h-auto w-full z-20"
+        className="absolute left-0 bottom-0 w-auto h-auto z-20 move-right"
       />
 
       <div className="absolute bottom-0 left-0 w-full h-6 bg-yellow-400 z-2"></div>
