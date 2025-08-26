@@ -19,9 +19,9 @@ const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title }) 
             }}
         >
             {/* Overlay Text */}
-            <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center z-10 p-6 sm:p-8 md:p-10 text-center">
+            <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center z-10 p-6 sm:p-8 md:p-10">
                 <div className="font-['Gagalin-Regular']">
-                    <h2 className="text-white font-bold text-4xl sm:text-5xl mb-4">
+                    <h2 className="text-white font-bold text-4xl sm:text-5xl mb-4  text-center">
                         {title.split("\n").map((line, index) => (
                             <React.Fragment key={index}>
                                 {line}
@@ -29,7 +29,7 @@ const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title }) 
                             </React.Fragment>
                         ))}
                     </h2>
-                    <p className="font-semibold text-lg sm:text-2xl">
+                    <p className="font-semibold text-lg sm:text-2xl text-left pr-32">
                         {text.split("\n").map((line, index) => (
                             <React.Fragment key={index}>
                                 {line}

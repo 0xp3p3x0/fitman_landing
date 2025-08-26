@@ -37,7 +37,7 @@ export function RoadmapSection() {
       imageSrc: "/images/graphics/27.png",
       imageAlt: "Decorative Shape",
       text: `Expanded CEX/DEX listings\nStrategic partnerships with meme projects and brands\nRecurring seasonal burns and community events`,
-      className: "-bottom-0 right-0 sm:right-0 lg:-right-8 ",
+      className: "-bottom-8 right-0 sm:right-0 lg:-right-8 ",
     },
   ];
 

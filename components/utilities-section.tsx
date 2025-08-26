@@ -55,8 +55,15 @@ export function UtilitiesSection() {
 
   return (
     <section
-      className="relative flex items-center justify-center overflow-hidden bg-yellow-100 py-12 lg:py-24"
+      className="relative items-center justify-center overflow-hidden bg-yellow-100 py-12 lg:py-24"
     >
+      <div className="w-full h-auto text-center mb-20 px-4">
+        <img
+          src="/images/utility_title.png"
+          alt="Utilities Section"
+          className="mx-auto w-72 md:w-96"
+          />
+        </div>
       <div className=" w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 px-20">
         {/* Map through the sectionsData array to render each section */}
         {sectionsData.map((section, index) => (
