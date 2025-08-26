@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function AboutSection() {
     return (
         <section
@@ -8,12 +6,10 @@ export function AboutSection() {
         >
             {/* Left (image + text) */}
             <div className="w-full lg:w-1/2 flex flex-col items-center md:items-start space-y-4 sm:space-y-5 md:space-y-6 relative z-10">
-                <Image
+                <img
                     src="/images/about-section.png"
                     alt="About Top Image"
                     loading="lazy"
-                    width={800}
-                    height={800}
                     className="w-full md:max-w-full h-auto"
                 />
                 <div className="font-['Gagalin-Regular'] text-left max-[425px]:text-[8px] max-md:text-xs md:text-base lg:text-2xl xl:text-3xl [text-stroke:1px_white] [text-fill-color:black] leading-relaxed md:leading-relaxed lg:leading-10 xl:leading-12">
@@ -32,31 +28,25 @@ export function AboutSection() {
 
             {/* Right (hero + bumper) */}
             <div className="w-full lg:w-1/2 flex flex-col items-center justify-center relative z-10 mt-8 lg:mt-0">
-                <Image
+                <img
                     src={"/images/hero.png"}
                     alt="Hero"
                     loading="lazy"
-                    width={500}
-                    height={500}
                     className="relative max-w-[50%] md:max-w-[60%] -bottom-12 md:-bottom-18 lg:-bottom-22 xl:-bottom-26 z-20 animate-bounce"
                 />
-                <Image
+                <img
                     src={"/images/bumper.png"}
                     alt="Bumper"
                     loading="lazy"
-                    width={500}
-                    height={500}
                     className="relative max-w-[50%] md:max-w-[60%] -bottom-8 lg:-bottom-12 xl:-bottom-16 z-10"
                 />
             </div>
 
             {/* Bottom background image */}
-            <Image
+            <img
                 src={"/images/about-bottom.png"}
                 alt="About Bottom"
                 loading="lazy"
-                width={1600}
-                height={400}
                 className="absolute bottom-0 left-0 w-full h-auto z-0"
             />
         </section>

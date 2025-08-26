@@ -1,5 +1,4 @@
 import { Separator } from "@/components/ui/separator"
-import Image from "next/image"
 
 export function Footer() {
   return (
@@ -9,11 +8,10 @@ export function Footer() {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <Image
+              <img
                 src="/images/graphics/3.png"
                 alt="FATMAN Logo"
-                width={40}
-                height={40}
+                loading="lazy"
                 className="w-auto h-auto"
               />
             

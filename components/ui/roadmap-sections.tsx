@@ -44,6 +44,7 @@ const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title, cl
                 <img
                     src={imageSrc}  // Dynamically set image source
                     alt={imageAlt}
+                    loading='lazy'
                     className={`absolute ${className} w-18 h-18 sm:w-18 sm:h-18 md:w-24 md:h-24 lg:w-36 lg:h-36 z-5`}  // Optional: Apply rounded corners to the image
                 />
             </div>

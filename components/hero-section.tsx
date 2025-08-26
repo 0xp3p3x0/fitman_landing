@@ -1,26 +1,21 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-
 export function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/back.png')", backgroundSize: 'cover' }}
     >
-      <Image
+      <img
         src="/images/back3.png"
         alt="Hero Image"
         loading="lazy"
-        width={1000}
-        height={1000}
         className="absolute top-8 sm:top-16 z-10 w-[90%] sm:w-[80%] md:w-[70%] lg:w-auto h-auto"
       />
-      <Image
+      <img
         src="/images/back2.png"
         alt="Hero Image"
-        width={100}
-        height={1000}
+        loading='lazy'
         className="absolute bottom-0 max-w-full h-auto w-fit"
       />
       <div className="absolute bottom-4 sm:bottom-8 z-10 text-center px-4 sm:px-6 w-full flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
@@ -53,32 +48,24 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-6 right-4 sm:bottom-10 sm:right-10 z-10 text-center px-2 sm:px-6 flex flex-col space-y-3 sm:space-y-4">
-        <Image
+        <img
           src="/images/button_1.png"
           alt="Scroll Down"
-          width={50}
-          height={50}
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:text-amber-600 transition-colors hover-grow"
         />
-        <Image
+        <img
           src="/images/button_2.png"
           alt="Scroll Down"
-          width={50}
-          height={50}
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:text-amber-600 transition-colors hover-grow"
         />
-        <Image
+        <img
           src="/images/button_3.png"
           alt="Scroll Down"
-          width={50}
-          height={50}
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:text-amber-600 transition-colors hover-grow"
         />
-        <Image
+        <img
           src="/images/button_4.png"
           alt="Scroll Down"
-          width={50}
-          height={50}
           className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 hover:text-amber-600 transition-colors hover-grow"
         />
       </div>

@@ -44,6 +44,7 @@ const Sections: React.FC<SectionsProps> = ({ text, imageSrc, imageAlt, title }) 
             <img
                 src={imageSrc}  // Dynamically set image source
                 alt={imageAlt}
+                loading='lazy'
                 className="absolute -bottom-0 -right-4 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-64 lg:h-64 object-contain z-5" // Ensure it’s contained and doesn’t overlap
             />
         </div>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function TokenomicsSection() {
@@ -11,7 +10,7 @@ export function TokenomicsSection() {
       <div className="absolute top-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
       
       {/* Background Images */}
-      <Image
+      <img
         src="/images/tokeno2.png"
         alt="Hero Image"
         loading="lazy"
@@ -19,7 +18,7 @@ export function TokenomicsSection() {
         height={1000}
         className="absolute top-0 z-5 max-w-full h-auto w-full"
       />
-      <Image
+      <img
         src="/images/tokeno1.png"
         alt="Hero Image"
         loading="lazy"
@@ -27,7 +26,7 @@ export function TokenomicsSection() {
         height={1000}
         className="absolute top-0 z-4 max-w-full h-auto w-full"
       />
-      <Image
+      <img
         src="/images/tokeno3.png"
         alt="Hero Image"
         loading="lazy"
@@ -75,12 +74,10 @@ export function TokenomicsSection() {
       </div>
 
       {/* Footer Image */}
-      <Image
+      <img
         src="/images/about-bottom.png"
         alt="About Image"
         loading="lazy"
-        width={800}
-        height={800}
         className="absolute bottom-0 left-0 z-0 max-w-full h-auto w-fit"
       />
 

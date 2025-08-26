@@ -61,6 +61,7 @@ export function UtilitiesSection() {
         <img
           src="/images/utility_title.png"
           alt="Utilities Section"
+          loading="lazy"
           className="mx-auto w-72 md:w-96"
           />
         </div>

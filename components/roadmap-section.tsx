@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import RoadmapSections from "./ui/roadmap-sections";
 
 export function RoadmapSection() {
@@ -49,12 +48,10 @@ export function RoadmapSection() {
       <div className="absolute top-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
 
       {/* Hero Image */}
-      <Image
+      <img
         src="/images/roadmap.png"
         alt="Hero Image"
         loading="lazy"
-        width={1000}
-        height={1000}
         className="absolute top-10 z-3 max-w-full h-auto w-fit"
       />
 
@@ -79,6 +76,7 @@ export function RoadmapSection() {
       <img
         src="/images/fatman_mortor.png"
         alt="Hero Image"
+        loading="lazy"
         className="absolute left-0 bottom-0 w-24 h-24 z-20 move-right sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"
       />
 
