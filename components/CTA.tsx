@@ -1,0 +1,30 @@
+const CTA = () => {
+  return (
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ backgroundColor: '#FEE280' }}
+    >
+      <div className="absolute top-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
+      <img
+        src="/images/whitelist/fat.webp"
+        alt="Hero Image"
+        loading="lazy"
+        className="absolute top-20 left-0 z-3 max-w-full h-auto w-fit"
+      />
+      <img
+        src="/images/whitelist/desc.webp"
+        alt="Hero Image"
+        loading="lazy"
+        className="absolute bottom-0 z-3 max-w-full h-auto w-fit"
+      />
+      <img
+        src="/images/whitelist/button.webp"
+        alt="Hero Image"
+        loading="lazy"
+        className="absolute bottom-0 left-60 z-3 max-w-full h-auto w-fit hover:text-amber-600 transition-colors hover-grow"
+      />
+    </section>
+  )
+}
+
+export default CTA;

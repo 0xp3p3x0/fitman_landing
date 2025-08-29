@@ -1,22 +1,19 @@
-import { HeroSection } from "@/components/hero-section"
-import { UtilitiesSection } from "@/components/utilities-section"
-import { TokenomicsSection } from "@/components/tokenomics-section"
-import { RoadmapSection } from "@/components/roadmap-section"
-import { CTASection } from "@/components/cta-section"
-import { Footer } from "@/components/footer"
-import { AboutSection } from "@/components/about-section"
-
+import Hero from "@/components/Hero"
+import About from "@/components/About"
+import Roadmap from "@/components/Roadmap"
+import Tokenomics from "@/components/Tokenomics"
+import Utils from "@/components/Utils"
+import CTA from "@/components/CTA"
 
 export default function Home() {
   return (
     <main className="">
-      <HeroSection />
-      <AboutSection />
-      <RoadmapSection />
-      <TokenomicsSection />
-      <UtilitiesSection />
-      <CTASection />
-      <Footer />
+      <Hero />
+      <About />
+      <Roadmap />
+      <Tokenomics />
+      <Utils />
+      <CTA />
     </main>
   )
 }

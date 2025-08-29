@@ -5,31 +5,43 @@
 
 :root {
   /* Updated to light brown/yellow meme theme with funny colors */
-  --background: oklch(0.98 0.02 85); /* Light cream/yellow background */
-  --foreground: oklch(0.2 0.05 45); /* Dark brown text */
-  --card: oklch(0.96 0.03 80); /* Light yellow cards */
+  --background: oklch(0.98 0.02 85);
+  /* Light cream/yellow background */
+  --foreground: oklch(0.2 0.05 45);
+  /* Dark brown text */
+  --card: oklch(0.96 0.03 80);
+  /* Light yellow cards */
   --card-foreground: oklch(0.2 0.05 45);
   --popover: oklch(0.96 0.03 80);
   --popover-foreground: oklch(0.2 0.05 45);
-  --primary: oklch(0.65 0.15 45); /* Golden/amber primary */
+  --primary: oklch(0.65 0.15 45);
+  /* Golden/amber primary */
   --primary-foreground: oklch(0.98 0.02 85);
-  --secondary: oklch(0.85 0.08 60); /* Light golden secondary */
+  --secondary: oklch(0.85 0.08 60);
+  /* Light golden secondary */
   --secondary-foreground: oklch(0.2 0.05 45);
   --muted: oklch(0.92 0.04 75);
   --muted-foreground: oklch(0.45 0.08 50);
-  --accent: oklch(0.75 0.12 50); /* Warm accent */
+  --accent: oklch(0.75 0.12 50);
+  /* Warm accent */
   --accent-foreground: oklch(0.98 0.02 85);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0.02 85);
   --border: oklch(0.88 0.06 70);
   --input: oklch(0.94 0.04 75);
   --ring: oklch(0.65 0.15 45);
-  --chart-1: oklch(0.65 0.15 45); /* Golden */
-  --chart-2: oklch(0.55 0.12 35); /* Brown */
-  --chart-3: oklch(0.75 0.18 55); /* Light amber */
-  --chart-4: oklch(0.45 0.08 40); /* Dark brown */
-  --chart-5: oklch(0.85 0.08 60); /* Light golden */
-  --radius: 1rem; /* More rounded for fun look */
+  --chart-1: oklch(0.65 0.15 45);
+  /* Golden */
+  --chart-2: oklch(0.55 0.12 35);
+  /* Brown */
+  --chart-3: oklch(0.75 0.18 55);
+  /* Light amber */
+  --chart-4: oklch(0.45 0.08 40);
+  /* Dark brown */
+  --chart-5: oklch(0.85 0.08 60);
+  /* Light golden */
+  --radius: 1rem;
+  /* More rounded for fun look */
   --sidebar: oklch(0.96 0.03 80);
   --sidebar-foreground: oklch(0.2 0.05 45);
   --sidebar-primary: oklch(0.65 0.15 45);
@@ -90,6 +102,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -97,55 +110,56 @@
 
 /* Added funny animations for meme website */
 @keyframes wiggle {
+
   0%,
   100% {
     transform: rotate(-3deg);
   }
+
   50% {
     transform: rotate(3deg);
   }
 }
 
-@keyframes bounce-slow {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
 @keyframes belly-shake {
+
   0%,
   100% {
     transform: scale(1);
   }
+
   25% {
     transform: scale(1.05) rotate(-1deg);
   }
+
   75% {
     transform: scale(1.05) rotate(1deg);
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
   }
+
   33% {
     transform: translateY(-10px) rotate(1deg);
   }
+
   66% {
     transform: translateY(5px) rotate(-1deg);
   }
@@ -155,47 +169,48 @@
   0% {
     transform: rotateY(0deg);
   }
+
   100% {
     transform: rotateY(360deg);
   }
 }
 
 @keyframes pulse-glow {
+
   0%,
   100% {
     box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(255, 193, 7, 0.6);
   }
 }
 
 @keyframes moveRight {
-   0% {
-    transform: translateX(-100%); /* Start off-screen from the left */
+  0% {
+    transform: translateX(-100%);
+    /* Start off-screen from the left */
   }
-  50% {
-    transform: translateX(0); /* Move to the center */
-  }
+
   100% {
-    transform: translateX(100vw); /* End off-screen to the right */
+    transform: translateX(100vw);
+    /* End off-screen to the right */
   }
 }
+
 .move-right {
-  animation: moveRight 7s ease-in-out infinite; /* Apply the animation */
+  animation: moveRight 5s ease-in-out infinite;
+  /* Apply the animation */
 }
 
 .animate-wiggle {
   animation: bounce 5s ease-in-out infinite;
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 3s ease-in-out infinite;
-}
-.animate-bounce{
+.animate-bounce {
   animation: bounce 2s ease-in-out infinite;
 }
-
 
 .animate-belly-shake {
   animation: belly-shake 2s ease-in-out infinite;
@@ -232,12 +247,33 @@
   font-weight: 900;
   font-style: normal;
 }
-.text-with-stroke {
-  font-size: 2rem;
-  color:black; /* Text color */
+
+.text-stroke {
+  color: black;
+  /* Text color */
   text-shadow:
-    1px 1px 0 #6b6102,   /* Horizontal shadow */
-    -1px -1px 0 #ffffff, /* Top-left shadow */
-    1px -1px 0 #ffffff,  /* Top-right shadow */
-    -1px 1px 0 #ffffff;  /* Bottom-left shadow */
+    1px 1px 0 #6b6102,
+    /* Horizontal shadow */
+    -1px -1px 0 #ffffff,
+    /* Top-left shadow */
+    1px -1px 0 #ffffff,
+    /* Top-right shadow */
+    -1px 1px 0 #ffffff;
+  /* Bottom-left shadow */
+}
+
+@keyframes scaleInOut {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.scale-in-loop {
+  animation: scaleInOut 3s ease-in-out infinite;
 }
