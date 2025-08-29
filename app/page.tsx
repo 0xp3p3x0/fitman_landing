@@ -4,6 +4,7 @@ import Roadmap from "@/components/Roadmap"
 import Tokenomics from "@/components/Tokenomics"
 import Utils from "@/components/Utils"
 import CTA from "@/components/CTA"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Tokenomics />
       <Utils />
       <CTA />
+      <Footer />
     </main>
   )
 }

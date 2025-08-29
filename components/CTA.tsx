@@ -1,30 +1,43 @@
+import Image from "next/image";
+
 const CTA = () => {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ backgroundColor: '#FEE280' }}
+      className="overflow-hidden relative grid grid-cols-1 md:grid-cols-[1fr_1fr] px-8 md:py-8 md:px-12 gap-4 md:gap-8 items-center justify-center"
+      style={{ backgroundColor: "#FEE280" }}
     >
-      <div className="absolute top-0 left-0 w-full h-6 bg-yellow-400 z-20"></div>
-      <img
-        src="/images/whitelist/fat.webp"
-        alt="Hero Image"
-        loading="lazy"
-        className="absolute top-20 left-0 z-3 max-w-full h-auto w-fit"
-      />
-      <img
+      <div className="flex justify-center z-10">
+        <Image
+          src="/images/whitelist/fat.webp"
+          alt="Whitelist FATMAN"
+          width={800}
+          height={1050}
+          loading="lazy"
+          className="w-1/2 md:w-3/4"
+        />
+      </div>
+
+      <Image
         src="/images/whitelist/desc.webp"
-        alt="Hero Image"
+        alt="Whitelist Desc"
+        width={1024}
+        height={1024}
         loading="lazy"
-        className="absolute bottom-0 z-3 max-w-full h-auto w-fit"
+        className="z-10"
       />
-      <img
+
+      <Image
         src="/images/whitelist/button.webp"
-        alt="Hero Image"
+        alt="Whitelist Button"
+        width={480}
+        height={480}
         loading="lazy"
-        className="absolute bottom-0 left-60 z-3 max-w-full h-auto w-fit hover:text-amber-600 transition-colors hover-grow"
+        className="z-20 absolute max-md:translate-y-2/3 bottom-2/3 md:bottom-0 left-1/2 -translate-x-1/2 
+        hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out
+        w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"
       />
     </section>
-  )
-}
+  );
+};
 
 export default CTA;

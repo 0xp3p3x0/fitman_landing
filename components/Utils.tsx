@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Sections from "./ui/sections"
+import UtilCard from "./ui/util-card";
 
 const Utils = () => {
   const utils = [
@@ -71,9 +71,9 @@ const Utils = () => {
         className="w-1/3 md:w-1/4 mb-4 sm:mb-8 xl:mb-12 z-10"
       />
 
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-20">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 px-8 lg:px-16 xl:px-32">
         {utils.map((util, index) => (
-          <Sections
+          <UtilCard
             key={index}
             text={util.text}
             imageSrc={util.imageSrc}
