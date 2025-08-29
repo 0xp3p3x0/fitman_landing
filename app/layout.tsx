@@ -19,7 +19,9 @@ export const metadata: Metadata = {
   title: "FATMAN - The Hero Gotham Deserves",
   description:
     "FATMAN ($FAT) - A meme cryptocurrency with real utility. Join the revolution with FATSWAP, NFTs, Launchpad, and more!",
-  generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico"
+  }
 }
 
 export default function RootLayout({
