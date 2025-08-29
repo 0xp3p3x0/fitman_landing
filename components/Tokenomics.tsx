@@ -14,6 +14,7 @@ const Tokenomics = () => {
     <section
       className="relative flex flex-col px-4 sm:px-8 xl:px-12 py-6 items-center justify-center overflow-hidden"
       style={{ backgroundColor: "#FEE280" }}
+      id="tokenomics"
     >
       <Image
         src="/images/tokenomics/fat.webp"

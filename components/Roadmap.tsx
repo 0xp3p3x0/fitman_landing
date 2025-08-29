@@ -57,6 +57,7 @@ const Roadmap = () => {
     <section
       className="relative flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat bg-yellow-200 px-4 sm:px-8 xl:px-12 py-8 gap-6 xl:gap-8"
       style={{ backgroundImage: "url('/images/roadmap/bg.webp')", backgroundSize: "cover" }}
+      id="roadmap"
     >
       <div className="absolute top-0 left-0 w-full h-4 bg-yellow-400"></div>
 
