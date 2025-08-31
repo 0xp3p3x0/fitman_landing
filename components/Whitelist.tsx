@@ -78,12 +78,12 @@ const Whitelist = () => {
 
     return (
         <div
-            className="bg-cover bg-center bg-no-repeat font-['Gagalin-Regular']"
+            className="bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url("/images/hero/bg.webp")', backgroundSize: "cover" }}
         >
             <div
                 className="flex flex-row items-center pt-8 px-8 gap-2 text-amber-900 hover:opacity-50 
-                text-lg cursor-pointer transition-all duration-300 ease-in-out"
+                text-lg cursor-pointer transition-all duration-300 ease-in-out font-['Gagalin-Regular']"
                 onClick={() => { router.push("/") }}
             >
                 <FiArrowLeft />
@@ -94,12 +94,12 @@ const Whitelist = () => {
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-8 animate-fade-in">
                         <h2
-                            className="text-4xl font-bold heading-stroke mb-4"
+                            className="text-4xl font-bold heading-stroke mb-4 font-['Gagalin-Regular']"
                         >
                             {" "}
                             Only the hungry get in
                         </h2>
-                        <p className="text-xl text-gray-900 max-w-3xl mx-auto">
+                        <p className="text-xl text-gray-900 max-w-3xl mx-auto font-['Gagalin-Regular']">
                             Step into the FATMAN ecosystem early. Unlock priority access, rewards, and insider updates
                         </p>
                     </div>
@@ -107,10 +107,10 @@ const Whitelist = () => {
                     <div className="max-w-2xl mx-auto animate-scale-in">
                         <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
                             <CardHeader className="text-center pb-8">
-                                <CardTitle className="text-2xl heading-stroke">
+                                <CardTitle className="text-2xl heading-stroke font-['Gagalin-Regular']">
                                     Be first with FATMAN
                                 </CardTitle>
-                                <CardDescription className="text-gray-900">
+                                <CardDescription className="text-gray-900 font-['Gagalin-Regular']">
                                     Secure early access to tokens, NFTs, and rewards
                                 </CardDescription>
                             </CardHeader>
@@ -174,7 +174,7 @@ const Whitelist = () => {
                                             <Button
                                                 type="submit"
                                                 disabled={isSubmitting}
-                                                className="w-full h-12 bg-amber-300 hover:bg-amber-400 text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed animate-fade-in"
+                                                className="w-full h-12 bg-amber-300 hover:bg-amber-400 text-black font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed animate-fade-in font-['Gagalin-Regular']"
                                             >
                                                 {isSubmitting ? "Submitting..." : "Join Whitelist"}
                                             </Button>
@@ -222,7 +222,7 @@ const InputField = ({ icon: Icon, errors, touched, ...props }: any) => (
     <div className="space-y-2 animate-fade-in">
         <Label
             htmlFor={props.id}
-            className="text-sm font-medium text-gray-900 flex items-center"
+            className="text-sm font-medium text-gray-900 flex items-center font-['Gagalin-Regular']"
         >
             <Icon className="h-4 w-4 mr-2" />
             {props.label}
@@ -234,7 +234,7 @@ const InputField = ({ icon: Icon, errors, touched, ...props }: any) => (
                 }`}
         />
         {errors[props.name] && touched[props.name] && (
-            <div className="text-red-500 text-sm mt-1">{errors[props.name]}</div>
+            <div className="text-red-500 text-sm mt-1 font-['Gagalin-Regular']">{errors[props.name]}</div>
         )}
     </div>
 );

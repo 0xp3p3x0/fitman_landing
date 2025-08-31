@@ -4,6 +4,13 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator"
 
 const Footer = () => {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <footer className="bg-yellow-100 text-amber-900 border-t-16 border-yellow-400 font-['Gagalin-Regular']">
             <div className="mx-auto px-8 py-12">
@@ -59,10 +66,10 @@ const Footer = () => {
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
                                 📜 <span>Whitepaper</span>
                             </a>
-                            <a href="#roadmap" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a onClick={() => scrollToSection("roadmap")} className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🗺️ <span>Roadmap</span>
                             </a>
-                            <a href="#tokenomics" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a onClick={() => scrollToSection("tokenomics")} className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 📊 <span>Tokenomics</span>
                             </a>
                         </div>
