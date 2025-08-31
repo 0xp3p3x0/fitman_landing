@@ -249,7 +249,6 @@
 }
 
 .text-stroke {
-  color: black;
   /* Text color */
   text-shadow:
     1px 1px 0 #6b6102,
@@ -259,6 +258,20 @@
     1px -1px 0 #ffffff,
     /* Top-right shadow */
     -1px 1px 0 #ffffff;
+  /* Bottom-left shadow */
+}
+
+.heading-stroke {
+  color: white;
+  /* Text color */
+  text-shadow:
+    3px 3px 0 #FEE280,
+    /* Horizontal shadow */
+    -3px -3px 0 #FEE280,
+    /* Top-left shadow */
+    3px -3px 0 #FEE280,
+    /* Top-right shadow */
+    -3px 3px 0 #FEE280;
   /* Bottom-left shadow */
 }
 

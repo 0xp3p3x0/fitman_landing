@@ -20,7 +20,7 @@ const UtilCard: React.FC<UtilCardProps> = ({ text, imageSrc, imageAlt, title }) 
         >
             {/* Overlay Text */}
             <div className="font-['Gagalin-Regular']">
-                <h2 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl mb-2 sm:mb-4 text-center">
+                <h2 className="heading-stroke font-bold text-2xl md:text-3xl lg:text-4xl mb-2 sm:mb-4 text-center">
                     {title}
                 </h2>
                 <p className="font-semibold text-lg md:text-xl lg:text-2xl mr-8 md:mr-16 text-left">
