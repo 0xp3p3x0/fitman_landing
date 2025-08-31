@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage, useFormikContext } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useAccount } from 'wagmi';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,6 +26,7 @@ import {
     RiYoutubeLine,
 } from "react-icons/ri";
 import { FiArrowLeft } from "react-icons/fi";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 // Yup validation schema
 const validationSchema = Yup.object({
@@ -46,8 +48,17 @@ const validationSchema = Yup.object({
 
 const Whitelist = () => {
     const [isConnected, setConnected] = useState(false);
-
+    const { address, isConnected: walletConnected } = useAccount();
     const router = useRouter();
+
+    // Auto-fill wallet address when wallet connects
+    useEffect(() => {
+        if (walletConnected && address) {
+            setConnected(true);
+        } else {
+            setConnected(false);
+        }
+    }, [walletConnected, address]);
 
     const handleSubmit = async (values: any, { setSubmitting, resetForm }: any) => {
         try {
@@ -81,20 +92,24 @@ const Whitelist = () => {
             className="bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url("/images/hero/bg.webp")', backgroundSize: "cover" }}
         >
-            <div
-                className="flex flex-row items-center pt-8 px-8 gap-2 text-amber-900 hover:opacity-50 
-                text-lg cursor-pointer transition-all duration-300 ease-in-out font-['Gagalin-Regular']"
-                onClick={() => { router.push("/") }}
-            >
-                <FiArrowLeft />
-                Back to Home
+            <div className="flex flex-row justify-between items-center p-8 pb-0">
+                <div
+                    className="flex flex-row items-center gap-2 text-amber-900 hover:opacity-50 
+                text-base sm:text-lg cursor-pointer transition-all duration-300 ease-in-out font-['Gagalin-Regular']"
+                    onClick={() => { router.push("/") }}
+                >
+                    <FiArrowLeft />
+                    Back to Home
+                </div>
+
+                <ConnectButton />
             </div>
 
             <div className="flex flex-col items-center justify-center py-4">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-8 animate-fade-in">
                         <h2
-                            className="text-4xl font-bold heading-stroke mb-4 font-['Gagalin-Regular']"
+                            className="text-3xl sm:text-4xl font-bold heading-stroke mb-4 font-['Gagalin-Regular']"
                         >
                             {" "}
                             Only the hungry get in
@@ -149,7 +164,7 @@ const Whitelist = () => {
                                                 touched={touched}
                                             />
 
-                                            <InputField
+                                            <WalletField
                                                 icon={Wallet}
                                                 id="wallet"
                                                 label="EVM Wallet Address *"
@@ -213,6 +228,41 @@ const Whitelist = () => {
                     </div>
                 </div>
             </div>
+        </div>
+    );
+};
+
+// Wallet field component that can auto-fill from connected wallet
+const WalletField = ({ icon: Icon, errors, touched, ...props }: any) => {
+    const { setFieldValue } = useFormikContext();
+    const { address, isConnected: walletConnected } = useAccount();
+
+    // Auto-fill wallet address when wallet connects
+    useEffect(() => {
+        if (walletConnected && address) {
+            setFieldValue('wallet', address);
+        }
+    }, [walletConnected, address, setFieldValue]);
+
+    return (
+        <div className="space-y-2 animate-fade-in">
+            <Label
+                htmlFor={props.id}
+                className="text-sm font-medium text-gray-900 flex items-center font-['Gagalin-Regular']"
+            >
+                <Icon className="h-4 w-4 mr-2" />
+                {props.label}
+            </Label>
+            <Field
+                as={Input}
+                {...props}
+                className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${
+                    errors[props.name] && touched[props.name] ? 'border-red-500' : ''
+                }`}
+            />
+            {errors[props.name] && touched[props.name] && (
+                <div className="text-red-500 text-sm mt-1 font-['Gagalin-Regular']">{errors[props.name]}</div>
+            )}
         </div>
     );
 };

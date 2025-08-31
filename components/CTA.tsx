@@ -39,8 +39,8 @@ const CTA = () => {
           height={480}
           loading="lazy"
           className="z-20 absolute max-md:translate-y-2/3 bottom-2/3 md:bottom-0 left-1/2 -translate-x-1/2 
-        hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out
-        w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64"
+        hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out
+        w-32 h-32 lg:w-48 lg:h-48 xl:w-64 xl:h-64 scale-in-loop"
         />
       </div>
     </section>
