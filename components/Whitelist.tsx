@@ -100,7 +100,7 @@ const Whitelist = () => {
                             Only the hungry get in
                         </h2>
                         <p className="text-xl text-gray-900 max-w-3xl mx-auto">
-                            Step into the FATMAN ecosystem early. Unlock priority access, rewards, and insider updates.
+                            Step into the FATMAN ecosystem early. Unlock priority access, rewards, and insider updates
                         </p>
                     </div>
 
@@ -108,10 +108,10 @@ const Whitelist = () => {
                         <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
                             <CardHeader className="text-center pb-8">
                                 <CardTitle className="text-2xl heading-stroke">
-                                    Early Access Registration
+                                    Be first with FATMAN
                                 </CardTitle>
                                 <CardDescription className="text-gray-900">
-                                    Secure your spot in the future of digital finance
+                                    Secure early access to tokens, NFTs, and rewards
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
