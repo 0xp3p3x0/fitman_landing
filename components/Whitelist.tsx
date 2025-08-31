@@ -187,12 +187,12 @@ const Whitelist = () => {
                                         href="https://x.com/Bluelink2025"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="Twitter"
+                                        aria-label="https://x.com/Fatswaps"
                                     >
                                         <RiTwitterLine className="text-2xl text-amber-300 hover:text-amber-400 transition" />
                                     </a>
                                     <a
-                                        href="https://t.me/bluelinkblockchain"
+                                        href="https://t.me/FAT_Swaps"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Telegram"
@@ -200,7 +200,7 @@ const Whitelist = () => {
                                         <RiTelegramLine className="text-2xl text-amber-300 hover:text-amber-400 transition" />
                                     </a>
                                     <a
-                                        href="https://t.me/bluelinkblockchain"
+                                        href="https://www.youtube.com/@FatSwaps"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="YouTube"

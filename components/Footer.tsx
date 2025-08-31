@@ -33,7 +33,7 @@ const Footer = () => {
                             <button
                                 style={{ backgroundImage: "url('/images/social/yt.webp')", backgroundSize: "cover" }}
                                 className="w-8 h-8 cursor-pointer hover:scale-125 transition-animation duration-300 ease-in-out bg-cover bg-center bg-no-repeat"
-                                onClick={() => window.open("www.youtube.com/@FatSwaps", "_blank")}
+                                onClick={() => window.open("https://www.youtube.com/@FatSwaps", "_blank")}
                             />
 
                             <button
