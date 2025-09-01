@@ -60,33 +60,6 @@ const Whitelist = () => {
         }
     }, [walletConnected, address]);
 
-    const handleSubmit = async (values: any, { setSubmitting, resetForm }: any) => {
-        try {
-            // Simulate API call (replace with actual implementation)
-            // const response = await fetch(process.env.NEXT_PUBLIC_WHITELIST_URL, {
-            //     method: "POST",
-            //     body: JSON.stringify(values),
-            // });
-
-            // Reset form on success
-            resetForm();
-            toast({
-                title: "Success!",
-                description: "You've been added to our Whitelist. We'll be in touch soon!",
-                duration: 2000
-            });
-        } catch (error) {
-            toast({
-                title: "Error",
-                description: "Something went wrong. Please try again.",
-                variant: "destructive",
-                duration: 2000
-            });
-        } finally {
-            setSubmitting(false);
-        }
-    };
-
     return (
         <div
             className="bg-cover bg-center bg-no-repeat"
@@ -107,14 +80,14 @@ const Whitelist = () => {
 
             <div className="flex flex-col items-center justify-center py-4">
                 <div className="container mx-auto px-6">
-                    <div className="text-center mb-8 animate-fade-in">
+                    <div className="text-center mb-6 sm:mb-8 animate-fade-in">
                         <h2
-                            className="text-3xl sm:text-4xl font-bold heading-stroke mb-4 font-['Gagalin-Regular']"
+                            className="text-3xl sm:text-4xl font-bold heading-stroke mb-2 sm:mb-4 font-['Gagalin-Regular']"
                         >
                             {" "}
                             Only the hungry get in
                         </h2>
-                        <p className="text-xl text-gray-900 max-w-3xl mx-auto font-['Gagalin-Regular']">
+                        <p className="text-base sm:text-xl text-gray-900 max-w-3xl mx-auto font-['Gagalin-Regular']">
                             Step into the FATMAN ecosystem early. Unlock priority access, rewards, and insider updates
                         </p>
                     </div>
@@ -138,7 +111,30 @@ const Whitelist = () => {
                                         social: ''
                                     }}
                                     validationSchema={validationSchema}
-                                    onSubmit={handleSubmit}
+                                    onSubmit={async (values, { setSubmitting, resetForm }) => {
+                                        try {
+                                            const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+                                            const response = await axios.post(scriptURL, values);
+
+                                            if (response.data.result === "success") {
+                                                toast({
+                                                    title: "Success 🎉",
+                                                    description: "You’ve been added to the whitelist!",
+                                                });
+                                                resetForm();
+                                            } else {
+                                                throw new Error(response.data.error || "Unknown error");
+                                            }
+                                        } catch (error: any) {
+                                            toast({
+                                                title: "Error ❌",
+                                                description: error.message || "Submission failed",
+                                                variant: "destructive",
+                                            });
+                                        } finally {
+                                            setSubmitting(false);
+                                        }
+                                    }}
                                 >
                                     {({ isSubmitting, errors, touched }) => (
                                         <Form className="space-y-6">
@@ -256,9 +252,8 @@ const WalletField = ({ icon: Icon, errors, touched, ...props }: any) => {
             <Field
                 as={Input}
                 {...props}
-                className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${
-                    errors[props.name] && touched[props.name] ? 'border-red-500' : ''
-                }`}
+                className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${errors[props.name] && touched[props.name] ? 'border-red-500' : ''
+                    }`}
             />
             {errors[props.name] && touched[props.name] && (
                 <div className="text-red-500 text-sm mt-1 font-['Gagalin-Regular']">{errors[props.name]}</div>

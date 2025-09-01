@@ -14,15 +14,15 @@ const Footer = () => {
     return (
         <footer className="bg-yellow-100 text-amber-900 border-t-16 border-yellow-400 font-['Gagalin-Regular']">
             <div className="mx-auto px-8 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8">
-                    <div className="space-y-4 text-xl">
+                <div className="grid grid-cols-1 sm:grid-cols-[2fr_1fr_1fr] gap-6 sm:gap-8">
+                    <div className="space-y-4 text-sm sm:text-base lg:text-xl">
                         <Image
                             src="/images/logo.webp"
                             alt="FATMAN Logo"
                             width={300}
                             height={45}
                             loading="lazy"
-                            className="w-auto h-auto"
+                            className="w-1/2 lg:w-1/3 h-auto"
                         />
 
                         <p>
@@ -57,9 +57,9 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-4">
-                        <p className="font-display font-bold text-2xl">Quick Links</p>
-                        <div className="space-y-2 text-2xl">
+                    <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
+                        <p className="font-display font-bold">Quick Links</p>
+                        <div className="space-y-2">
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
                                 🚀 <span>Buy $FAT</span>
                             </a>
@@ -75,9 +75,9 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-4">
-                        <h4 className="font-display font-bold text-2xl">Ecosystem</h4>
-                        <div className="space-y-2 text-2xl">
+                    <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
+                        <h4 className="font-display font-bold">Ecosystem</h4>
+                        <div className="space-y-2">
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
                                 🔄 <span>FATSWAP</span>
                             </a>
@@ -94,9 +94,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <Separator className="my-8 bg-amber-300" />
+                <Separator className="my-4 sm:my-6 bg-amber-300" />
 
-                <p className="text-2xl">© 2024 FATMAN. ALL RIGHTS RESERVED.</p>
+                <p className="text-sm sm:text-base lg:text-xl">© 2024 FATMAN. ALL RIGHTS RESERVED.</p>
             </div>
         </footer>
     )
