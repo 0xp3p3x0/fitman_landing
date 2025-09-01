@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { Formik, Form, Field, ErrorMessage, useFormikContext } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-import { useAccount } from 'wagmi';
+import { Formik, Form, Field, useFormikContext } from "formik";
+import * as Yup from "yup";
+
+import { useAccount } from "wagmi";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,24 +27,23 @@ import {
     RiYoutubeLine,
 } from "react-icons/ri";
 import { FiArrowLeft } from "react-icons/fi";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 // Yup validation schema
 const validationSchema = Yup.object({
     name: Yup.string()
-        .required('Full name is required')
-        .min(2, 'Name must be at least 2 characters')
-        .max(50, 'Name must be less than 50 characters'),
+        .required("Full name is required")
+        .min(2, "Name must be at least 2 characters")
+        .max(50, "Name must be less than 50 characters"),
     email: Yup.string()
-        .required('Email is required')
-        .email('Please enter a valid email address'),
+        .required("Email is required")
+        .email("Please enter a valid email address"),
     wallet: Yup.string()
-        .required('Wallet address is required')
-        .matches(/^0x[a-fA-F0-9]{40}$/, 'Please enter a valid EVM wallet address'),
+        .required("Wallet address is required")
+        .matches(/^0x[a-fA-F0-9]{40}$/, "Please enter a valid EVM wallet address"),
     social: Yup.string()
-        .required('Social links are required')
-        .min(10, 'Please provide valid social media links')
-        .max(500, 'Social links are too long')
+        .required("Social links are required")
+        .min(10, "Please provide valid social media links")
+        .max(500, "Social links are too long")
 });
 
 const Whitelist = () => {
@@ -105,30 +105,51 @@ const Whitelist = () => {
                             <CardContent>
                                 <Formik
                                     initialValues={{
-                                        name: '',
-                                        email: '',
-                                        wallet: '',
-                                        social: ''
+                                        name: "",
+                                        email: "",
+                                        wallet: "",
+                                        social: ""
                                     }}
                                     validationSchema={validationSchema}
                                     onSubmit={async (values, { setSubmitting, resetForm }) => {
                                         try {
-                                            const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
-                                            const response = await axios.post(scriptURL, values);
+                                            const scriptURL = process.env.NEXT_PUBLIC_WHITELIST_URL;
+                                            
+                                            if (!scriptURL) {
+                                                throw new Error("Whitelist URL not configured");
+                                            }
 
-                                            if (response.data.result === "success") {
+                                            const res = await fetch(scriptURL, {
+                                                method: "POST",
+                                                body: JSON.stringify(values),
+                                            });
+
+                                            const data = await res.json();
+
+                                            if (data.result === "success") {
                                                 toast({
-                                                    title: "Success 🎉",
-                                                    description: "You’ve been added to the whitelist!",
+                                                    title: "✅ Success",
+                                                    description: "You’ve joined the whitelist!",
                                                 });
                                                 resetForm();
+                                            } else if (data.result === "duplicate") {
+                                                toast({
+                                                    title: "⚠️ Duplicate",
+                                                    description: data.message,
+                                                    variant: "destructive",
+                                                });
                                             } else {
-                                                throw new Error(response.data.error || "Unknown error");
+                                                toast({
+                                                    title: "❌ Error",
+                                                    description: data.message || "Something went wrong.",
+                                                    variant: "destructive",
+                                                });
                                             }
-                                        } catch (error: any) {
+                                        } catch (err) {
+                                            console.error(err);
                                             toast({
-                                                title: "Error ❌",
-                                                description: error.message || "Submission failed",
+                                                title: "❌ Error",
+                                                description: "Unable to submit form.",
                                                 variant: "destructive",
                                             });
                                         } finally {
@@ -236,7 +257,7 @@ const WalletField = ({ icon: Icon, errors, touched, ...props }: any) => {
     // Auto-fill wallet address when wallet connects
     useEffect(() => {
         if (walletConnected && address) {
-            setFieldValue('wallet', address);
+            setFieldValue("wallet", address);
         }
     }, [walletConnected, address, setFieldValue]);
 
@@ -252,7 +273,7 @@ const WalletField = ({ icon: Icon, errors, touched, ...props }: any) => {
             <Field
                 as={Input}
                 {...props}
-                className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${errors[props.name] && touched[props.name] ? 'border-red-500' : ''
+                className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${errors[props.name] && touched[props.name] ? "border-red-500" : ""
                     }`}
             />
             {errors[props.name] && touched[props.name] && (
@@ -275,7 +296,7 @@ const InputField = ({ icon: Icon, errors, touched, ...props }: any) => (
         <Field
             as={Input}
             {...props}
-            className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${errors[props.name] && touched[props.name] ? 'border-red-500' : ''
+            className={`h-12 border-amber-300 focus:border-amber-400 focus:ring-amber-400 bg-white ${errors[props.name] && touched[props.name] ? "border-red-500" : ""
                 }`}
         />
         {errors[props.name] && touched[props.name] && (
