@@ -216,10 +216,10 @@ const Whitelist = () => {
 
                                 <div className="flex flex-row items-center justify-center gap-4 mt-6">
                                     <a
-                                        href="https://x.com/Fatswaps"
+                                        href="https://x.com/fatswaps?s=21&t=ILk-W94OMusx0Xy_RWrhOQ"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        aria-label="https://x.com/Fatswaps"
+                                        aria-label="X"
                                     >
                                         <RiTwitterLine className="text-2xl text-amber-300 hover:text-amber-400 transition" />
                                     </a>
