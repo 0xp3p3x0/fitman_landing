@@ -216,7 +216,7 @@ const Whitelist = () => {
 
                                 <div className="flex flex-row items-center justify-center gap-4 mt-6">
                                     <a
-                                        href="https://x.com/Bluelink2025"
+                                        href="https://x.com/Fatswaps"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="https://x.com/Fatswaps"
