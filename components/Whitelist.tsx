@@ -22,9 +22,9 @@ import { toast } from "@/hooks/use-toast";
 
 import { Mail, User, Link, Wallet } from "lucide-react"
 import {
-    RiTwitterLine,
     RiTelegramLine,
     RiYoutubeLine,
+    RiTwitterXLine,
 } from "react-icons/ri";
 import { FiArrowLeft } from "react-icons/fi";
 
@@ -221,7 +221,7 @@ const Whitelist = () => {
                                         rel="noopener noreferrer"
                                         aria-label="X"
                                     >
-                                        <RiTwitterLine className="text-2xl text-amber-300 hover:text-amber-400 transition" />
+                                        <RiTwitterXLine className="text-2xl text-amber-300 hover:text-amber-400 transition" />
                                     </a>
                                     <a
                                         href="https://t.me/FAT_Swaps"
