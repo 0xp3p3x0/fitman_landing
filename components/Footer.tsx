@@ -60,7 +60,7 @@ const Footer = () => {
                     <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
                         <p className="font-display font-bold">Quick Links</p>
                         <div className="space-y-2">
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🚀 <span>Buy $FAT</span>
                             </a>
                             <a href="/docs/FAT_Whitepaper.pdf" target="_blank" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
@@ -78,16 +78,16 @@ const Footer = () => {
                     <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
                         <h4 className="font-display font-bold">Ecosystem</h4>
                         <div className="space-y-2">
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🔄 <span>FATSWAP</span>
                             </a>
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🖼️ <span>FAT NFTs</span>
                             </a>
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🚀 <span>Launchpad</span>
                             </a>
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🎮 <span>Games</span>
                             </a>
                         </div>

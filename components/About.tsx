@@ -6,6 +6,7 @@ const About = () => {
             className="relative flex flex-col sm:flex-row items-center justify-between overflow-hidden 
                        px-4 lg:px-8 xl:px-12 py-8 sm:py-12 lg:py-16"
             style={{ backgroundColor: "#FEE280" }}
+            id="about"
         >
             <div className="relative z-10 w-full sm:w-1/2 flex flex-col items-center lg:items-start space-y-2 sm:space-y-4">
                 <Image

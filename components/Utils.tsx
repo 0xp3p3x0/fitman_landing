@@ -61,7 +61,10 @@ const Utils = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center overflow-hidden bg-yellow-200 border-b-16 border-yellow-400 py-6">
+    <section
+      id="utils"
+      className="flex flex-col items-center justify-center overflow-hidden bg-yellow-200 border-b-16 border-yellow-400 py-6"
+    >
       <Image
         src="/images/util/heading.webp"
         alt="Utility Heading"

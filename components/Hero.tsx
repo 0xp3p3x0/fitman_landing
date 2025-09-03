@@ -4,6 +4,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
@@ -56,41 +63,49 @@ const Hero = () => {
       </div>
 
       <div className="absolute z-10 flex flex-col gap-3 bottom-16 sm:bottom-32 lg:bottom-20 right-12">
-        <Image
-          src="/images/hero/clickable1.webp"
-          width={160}
-          height={160}
-          alt="Hero Clickable"
-          className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
+        <div onClick={() => { scrollToSection("about") }}>
+          <Image
+            src="/images/hero/clickable1.webp"
+            width={160}
+            height={160}
+            alt="Hero Clickable"
+            className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
                 hover:text-amber-600 transition-colors hover-grow"
-        />
+          />
+        </div>
 
-        <Image
-          src="/images/hero/clickable2.webp"
-          width={160}
-          height={160}
-          alt="Hero Clickable"
-          className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
+        <div onClick={() => { scrollToSection("roadmap") }}>
+          <Image
+            src="/images/hero/clickable2.webp"
+            width={160}
+            height={160}
+            alt="Hero Clickable"
+            className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
                 hover:text-amber-600 transition-colors hover-grow"
-        />
+          />
+        </div>
 
-        <Image
-          src="/images/hero/clickable3.webp"
-          width={160}
-          height={160}
-          alt="Hero Clickable"
-          className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
+        <div onClick={() => { scrollToSection("tokenomics") }}>
+          <Image
+            src="/images/hero/clickable3.webp"
+            width={160}
+            height={160}
+            alt="Hero Clickable"
+            className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
                 hover:text-amber-600 transition-colors hover-grow"
-        />
+          />
+        </div>
 
-        <Image
-          src="/images/hero/clickable4.webp"
-          width={160}
-          height={160}
-          alt="Hero Clickable"
-          className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
+        <div onClick={() => { scrollToSection("utils") }}>
+          <Image
+            src="/images/hero/clickable4.webp"
+            width={160}
+            height={160}
+            alt="Hero Clickable"
+            className="cursor-pointer w-12 h-12 sm:w-18 sm:h-18 md:w-24 md:h-24 
                 hover:text-amber-600 transition-colors hover-grow"
-        />
+          />
+        </div>
       </div>
     </section>
   );
