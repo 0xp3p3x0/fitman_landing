@@ -51,9 +51,7 @@ const Hero = () => {
           style={{
             backgroundImage: 'url("/images/hero/whitepaper.webp")'
           }}
-        // onClick={() =>
-        //   (window.location.href = "https://pancakeswap.finance/swap")
-        // }
+          onClick={() => { window.open("/docs/FAT_Whitepaper.pdf", "_blank") }}
         />
       </div>
 
