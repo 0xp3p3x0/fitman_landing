@@ -63,7 +63,7 @@ const Footer = () => {
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
                                 🚀 <span>Buy $FAT</span>
                             </a>
-                            <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
+                            <a href="/docs/FAT_Whitepaper.pdf" target="_blank" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
                                 📜 <span>Whitepaper</span>
                             </a>
                             <a onClick={() => scrollToSection("roadmap")} className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
@@ -96,7 +96,7 @@ const Footer = () => {
 
                 <Separator className="my-4 sm:my-6 bg-amber-300" />
 
-                <p className="text-sm sm:text-base lg:text-xl">© 2024 FATMAN. ALL RIGHTS RESERVED.</p>
+                <p className="text-sm sm:text-base lg:text-xl">© 2025 FATMAN. ALL RIGHTS RESERVED.</p>
             </div>
         </footer>
     )
