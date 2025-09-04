@@ -7,14 +7,14 @@ const Utils = () => {
       text: "Charity fighting hunger! Because even heroes need to eat well, and so should everyone else. Making the world fatter... with kindness!",
       imageSrc: "/images/util/1.webp",
       imageAlt: "Utility 1",
-      title: "FATFOOD"
+      title: "FAT FOR FOOD"
     },
 
     {
       text: "Community governance where every vote counts! Shape the future while FATMAN munches on governance proposals. Democracy never tasted SO GOOD!",
       imageSrc: "/images/util/2.webp",
       imageAlt: "Utility 2",
-      title: "FATDAO"
+      title: "FAT DAO"
     },
 
     {
@@ -28,21 +28,21 @@ const Utils = () => {
       text: "Launch projects with FATMAN's backing! We help good projects get fat returns while our hero provides the muscle (and belly)!",
       imageSrc: "/images/util/4.webp",
       imageAlt: "Utility 4",
-      title: "SNACK PAD"
+      title: "FAT LAUNCHPAD"
     },
 
     {
       text: "Usage creates fees, fees fuel buybacks, buybacks burn supply, supply reduction drives value.",
       imageSrc: "/images/util/5.webp",
       imageAlt: "Utility 5",
-      title: "FATBURN"
+      title: "FAT BURN"
     },
 
     {
       text: "Official FATMAN merchandise store! Rep the brand in XXXL sizes while supporting our chunky ecosystem. Fashion meets function!",
       imageSrc: "/images/util/6.webp",
       imageAlt: "Utility 6",
-      title: "FATMERCH"
+      title: "FAT MERCH"
     },
 
     {

@@ -251,13 +251,13 @@
 .text-stroke {
   /* Text color */
   text-shadow:
-    1px 1px 0 #6b6102,
+    1px 1px 0 #facc15,
     /* Horizontal shadow */
-    -1px -1px 0 #ffffff,
+    -1px -1px 0 #facc15,
     /* Top-left shadow */
-    1px -1px 0 #ffffff,
+    1px -1px 0 #facc15,
     /* Top-right shadow */
-    -1px 1px 0 #ffffff;
+    -1px 1px 0 #facc15;
   /* Bottom-left shadow */
 }
 
@@ -265,13 +265,13 @@
   color: white;
   /* Text color */
   text-shadow:
-    3px 3px 0 #FEE280,
+    2px 2px 0 #FEE280,
     /* Horizontal shadow */
-    -3px -3px 0 #FEE280,
+    -2px -2px 0 #FEE280,
     /* Top-left shadow */
-    3px -3px 0 #FEE280,
+    2px -2px 0 #FEE280,
     /* Top-right shadow */
-    -3px 3px 0 #FEE280;
+    -2px 2px 0 #FEE280;
   /* Bottom-left shadow */
 }
 

@@ -42,7 +42,7 @@ const Hero = () => {
                !aspect-[256/64] h-auto
                hover:scale-105 transition-transform"
           style={{
-            backgroundImage: 'url("/images/hero/pinksale.webp")'
+            backgroundImage: 'url("/images/hero/buy.webp")'
           }}
         // onClick={() =>
         //   (window.location.href = "https://pancakeswap.finance/swap")

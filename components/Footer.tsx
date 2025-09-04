@@ -57,7 +57,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
+                    <div className="space-y-3 text-base sm:text-xl lg:text-2xl">
                         <p className="font-display font-bold">Quick Links</p>
                         <div className="space-y-2">
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
@@ -75,7 +75,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-4 text-base sm:text-xl lg:text-2xl">
+                    <div className="space-y-3 text-base sm:text-xl lg:text-2xl">
                         <h4 className="font-display font-bold">Ecosystem</h4>
                         <div className="space-y-2">
                             <a className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
