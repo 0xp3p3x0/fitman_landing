@@ -19,7 +19,7 @@ const About = () => {
                 />
 
                 <div className="relative z-10 font-['Gagalin-Regular'] text-left text-stroke
-                                xl:text-3xl/12 lg:text-2xl/9 sm:text-lg/8 text-base/6">
+                                xl:text-3xl/12 lg:text-2xl/9 sm:text-lg/8 text-base/6 max-sm:mb-6">
                     FATMAN IS A FOOD-LOVING HERO BORN IN WEB3 AND RAISED BY THE
                     MEME CULTURE OF THE INTERNET. HE BECAME A SYMBOL OF
                     LAUGHTER AND COMMUNITY AFTER HIS LARGER-THAN-LIFE
@@ -33,14 +33,14 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="relative z-20 w-full sm:w-1/2 flex flex-col items-center justify-center -space-y-4 sm:-space-y-8 xl:-space-y-12">
+            <div className="z-20 w-full sm:w-1/2 flex flex-col items-center justify-center -space-y-4 sm:-space-y-8">
                 <Image
                     src={"/images/about/fat.webp"}
                     alt="Hero"
                     width={480}
                     height={480}
                     loading="lazy"
-                    className="animate-bounce w-1/3 sm:w-2/3"
+                    className="animate-bounce w-1/3 sm:w-1/2"
                 />
 
                 <Image
@@ -49,7 +49,7 @@ const About = () => {
                     width={622}
                     height={250}
                     loading="lazy"
-                    className="w-1/3 sm:w-2/3"
+                    className="w-1/3 sm:w-1/2"
                 />
             </div>
 
