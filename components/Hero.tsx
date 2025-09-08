@@ -43,10 +43,8 @@ const Hero = () => {
                hover:scale-105 transition-transform"
           style={{
             backgroundImage: 'url("/images/hero/buy.webp")'
-          }}
-        // onClick={() =>
-        //   (window.location.href = "https://pancakeswap.finance/swap")
-        // }
+          }} 
+          onClick={() => { window.open("https://www.pinksale.finance/launchpad/bsc/0xB1A36a992B7bE357a0a984C869A59d002213c249", "_blank") }}
         />
 
         <Button
