@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Tokenomics = () => {
   const allocations = [
-    { label: "Fairlaunch (Pinksale)", value: "70%" },
+    { label: "Fairlaunch (GEMPAD)", value: "70%" },
     { label: "Marketing", value: "8% (vested)" },
     { label: "Community Rewards", value: "2% (airdrops, contests, raids)" },
     { label: "Team & Development", value: "10% (vested, 3-month cliff)" },

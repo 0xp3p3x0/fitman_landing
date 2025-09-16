@@ -16,7 +16,7 @@ const Roadmap = () => {
       title: "PHASE 0 \nPRE-LAUNCH",
       imageSrc: "/images/roadmap/1.webp",
       imageAlt: "Phase 0",
-      text: `BRAND\nWEBSITE\nCOMMUNITY BUILDUP\nMARKETING CAMPAIGNS\nPINKSALE FAIRLAUNCH`,
+      text: `BRAND\nWEBSITE\nCOMMUNITY BUILDUP\nMARKETING CAMPAIGNS\nGEMPAD FAIRLAUNCH`,
       className: "bottom-0 right-0 sm:right-0 lg:-right-8",
     },
 

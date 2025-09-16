@@ -44,7 +44,7 @@ const Hero = () => {
           style={{
             backgroundImage: 'url("/images/hero/buy.webp")'
           }} 
-          onClick={() => { window.open("https://www.pinksale.finance/launchpad/bsc/0xB1A36a992B7bE357a0a984C869A59d002213c249", "_blank") }}
+          onClick={() => { window.open("https://gempad.app/presale/0x470aEF54FA1606B8d421f8164a838e5F7DcBD038?network=BNB_Smart_Chain", "_blank") }}
         />
 
         <Button

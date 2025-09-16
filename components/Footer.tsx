@@ -60,7 +60,7 @@ const Footer = () => {
                     <div className="space-y-3 text-base sm:text-xl lg:text-2xl">
                         <p className="font-display font-bold">Quick Links</p>
                         <div className="space-y-2">
-                            <a href="https://www.pinksale.finance/launchpad/bsc/0xB1A36a992B7bE357a0a984C869A59d002213c249" target="_blank" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
+                            <a href="https://gempad.app/presale/0x470aEF54FA1606B8d421f8164a838e5F7DcBD038?network=BNB_Smart_Chain" target="_blank" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2 cursor-pointer">
                                 🚀 <span>Buy $FAT</span>
                             </a>
                             <a href="/docs/FAT_Whitepaper.pdf" target="_blank" className="hover:text-amber-600 transition-colors hover-grow flex items-center gap-2">
